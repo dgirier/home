@@ -1,10 +1,36 @@
 <template>
-  <div id="app" class>
-    <div id="nav">
-      <router-link to="/">Home</router-link>|
-      <router-link to="/vuejs">Vue JS</router-link>|
-      <router-link to="/about">About me</router-link>
-    </div>
-    <router-view />
-  </div>
+        <b-container fluid>
+            <b-navbar type="dark" fixed="fixed" variant="dark">
+                <b-navbar-brand>girier.net</b-navbar-brand>
+                <b-navbar-nav>
+                    <b-nav-item to="/" exact exact-active-class="active">Accueil</b-nav-item>|
+                    <b-nav-item to="/vuejs" exact exact-active-class="active">Vue JS</b-nav-item>|
+                    <b-nav-item to="/about" exact exact-active-class="active">à propos</b-nav-item>
+                </b-navbar-nav>
+                <b-navbar-nav class="ml-auto">
+                    <LoginBtn :user='user' @log-in="login"/>
+                </b-navbar-nav>
+            </b-navbar>
+            <router-view />
+        </b-container>
 </template>
+
+<script>
+import LoginBtn from "./components/Login";
+
+export default {
+  components: {
+    LoginBtn
+  },
+  data() {
+      return {
+          user: null
+      }
+  },
+  methods: {
+      login(user) {
+          this.user = user
+      }
+  }
+};
+</script>
