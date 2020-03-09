@@ -6,11 +6,16 @@
             <b-icon-person v-else variant="light"></b-icon-person>
         </div>
         <b-popover target="login-icon" triggers="hover" placement="bottom" title="Utilisateur">
-            <div v-if="user">{{user.name}}</div>
+            <div class="h5 mb-0" v-if="user">
+                {{user.name}}
+                <b-button variant="outline-danger" pill class="mb-0" size="sm" @click="handleLogout">
+                    <b-icon-power></b-icon-power>
+                </b-button>
+            </div>
             <b-btn v-else v-b-modal.login-modal>Connectez-vous</b-btn>
         </b-popover>
         <b-modal id="login-modal" title="Login" @ok="handleOk">
-            <b-form ref="form" @submit="handleSubmit" >
+            <b-form ref="form" @submit="handleSubmit">
                 <b-input
                     id="login-name"
                     v-model="name"
@@ -35,21 +40,22 @@
 </template>
 
 <script>
-import { BIconPerson, BIconPersonFill } from "bootstrap-vue";
+import { BIconPerson, BIconPersonFill, BIconPower } from "bootstrap-vue";
 
 export default {
     name: "LoginComponent",
     components: {
         BIconPerson,
-        BIconPersonFill
+        BIconPersonFill,
+        BIconPower
     },
     props: {
         user: {}
     },
     data() {
         return {
-            name: '',
-            pwd: ''
+            name: "",
+            pwd: ""
         };
     },
     methods: {
@@ -71,6 +77,9 @@ export default {
             this.$nextTick(() => {
                 this.$bvModal.hide("login-modal");
             });
+        },
+        handleLogout() {
+            this.$emit("log-out");
         }
     }
 };

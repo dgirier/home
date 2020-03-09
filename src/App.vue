@@ -8,7 +8,7 @@
                     <b-nav-item to="/about" exact exact-active-class="active">à propos</b-nav-item>
                 </b-navbar-nav>
                 <b-navbar-nav class="ml-auto">
-                    <LoginBtn :user='user' @log-in="login"/>
+                    <LoginBtn :user='user' @log-in="login" @log-out="logout"/>
                 </b-navbar-nav>
             </b-navbar>
             <router-view />
@@ -30,6 +30,9 @@ export default {
   methods: {
       login(user) {
           this.user = user
+      },
+      logout() {
+          this.user = null
       }
   }
 };
