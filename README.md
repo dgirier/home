@@ -1,6 +1,6 @@
 # Home
 
-My Web Site showing up my knowledge.
+My Web Site to present myself and showing up my knowledge.
 
 ## Project config for adding plugins
 
