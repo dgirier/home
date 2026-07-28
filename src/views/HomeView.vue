@@ -11,7 +11,7 @@ import HelloWorld from "@/components/HelloWorld.vue";
 import BookList from "@/components/BookList.vue";
 
 export default {
-    name: "Home",
+    name: "HomeView",
     components: {
         HelloWorld,
         BookList
