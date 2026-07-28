@@ -1,6 +1,6 @@
 <template>
     <div class="home">
-        <HelloWorld msg="Bienvenue sur mon site" />
+        <HelloWorld msg="Welcome to my website" />
         <BookList />
     </div>
 </template>

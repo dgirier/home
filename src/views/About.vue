@@ -1,5 +1,6 @@
 <template>
   <div class="about">
-    <h1>girier.net est un site personnel</h1>
+    <h1>Welcome to my Web site</h1>
+    
   </div>
 </template>

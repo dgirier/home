@@ -3,35 +3,25 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint --ext .vue,.js src"
   },
   "dependencies": {
-    "bootstrap-vue": "^2.1.0",
-    "vue": "^2.6.11",
-    "vue-router": "^3.1.5",
-    "vuex": "^3.1.2"
+    "bootstrap": "^5.3.0",
+    "bootstrap-icons": "^1.11.0",
+    "bootstrap-vue-next": "^0.23.0",
+    "vue": "^3.4.0",
+    "vue-router": "^4.3.0",
+    "vuex": "^4.1.0"
   },
   "devDependencies": {
-    "@babel/polyfill": "^7.7.0",
-    "@vue/cli-plugin-babel": "~5.0.9",
-    "@vue/cli-plugin-eslint": "~5.0.9",
-    "@vue/cli-plugin-router": "^5.0.9",
-    "@vue/cli-plugin-vuex": "^4.2.2",
-    "@vue/cli-service": "~5.0.9",
-    "babel-eslint": "^10.0.3",
-    "bootstrap": "^4.3.1",
-    "core-js": "^3.6.4",
-    "eslint": "^10.4.1",
-    "eslint-plugin-vue": "^6.1.2",
-    "mutationobserver-shim": "^0.3.3",
-    "popper.js": "^1.16.0",
-    "portal-vue": "^2.1.6",
+    "@vitejs/plugin-vue": "^6.0.7",
+    "eslint": "^8.57.0",
+    "eslint-plugin-vue": "^9.25.0",
     "sass": "^1.19.0",
-    "sass-loader": "^8.0.0",
-    "vue-cli-plugin-bootstrap-vue": "^0.6.0",
-    "vue-template-compiler": "^2.6.11"
+    "vite": "^8.0.16"
   },
   "eslintConfig": {
     "root": true,
@@ -39,12 +29,9 @@
       "node": true
     },
     "extends": [
-      "plugin:vue/essential",
+      "plugin:vue/vue3-essential",
       "eslint:recommended"
     ],
-    "parserOptions": {
-      "parser": "babel-eslint"
-    },
     "rules": {}
   },
   "browserslist": [

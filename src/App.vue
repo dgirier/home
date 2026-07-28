@@ -1,7 +1,7 @@
 <template>
     <b-container id="spa" fluid>
-        <b-navbar type="dark" fixed="fixed" variant="dark">
-            <b-navbar-brand>girier.net</b-navbar-brand>
+        <b-navbar data-bs-theme="dark" fixed="fixed" variant="dark">
+            <b-navbar-brand>dgirier.github.io</b-navbar-brand>
 
             <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -11,7 +11,7 @@
                     <b-nav-item to="/vuejs" exact exact-active-class="active">Vue JS</b-nav-item>|
                     <b-nav-item to="/about" exact exact-active-class="active">à propos</b-nav-item>
                 </b-navbar-nav>
-                <b-navbar-nav class="ml-auto">
+                <b-navbar-nav class="ms-auto">
                     <LoginBtn :user="user" @log-in="login" @log-out="logout" />
                 </b-navbar-nav>
             </b-collapse>
@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import LoginBtn from "./components/Login";
+import LoginBtn from "./components/Login.vue";
 
 export default {
     components: {

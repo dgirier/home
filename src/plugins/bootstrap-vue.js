@@ -1,7 +1,6 @@
-import Vue from 'vue'
-
-import BootstrapVue from 'bootstrap-vue'
+import { createBootstrap } from 'bootstrap-vue-next'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
+import 'bootstrap-vue-next/dist/bootstrap-vue-next.css'
+import 'bootstrap-icons/font/bootstrap-icons.css'
 
-Vue.use(BootstrapVue)
+export default createBootstrap()
